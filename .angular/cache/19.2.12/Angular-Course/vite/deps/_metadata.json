@@ -1,0 +1,34 @@
+{
+  "hash": "81b5393e",
+  "configHash": "eb5801ba",
+  "lockfileHash": "def4d859",
+  "browserHash": "70aa41b1",
+  "optimized": {
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "5787ecf5",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "c2feac54",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "93286bd8",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-XLPCLLTN": {
+      "file": "chunk-XLPCLLTN.js"
+    },
+    "chunk-MHO7SAPS": {
+      "file": "chunk-MHO7SAPS.js"
+    }
+  }
+}
