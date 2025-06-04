@@ -19,4 +19,8 @@ export class TodoListComponent {
             title: 'Test2',
         }
     ]
+
+    doInsert(title: string) {
+        this.todos.push({id: Math.random(), title:  title})
+    }
 }

@@ -2,6 +2,6 @@
   <h4>
     Add Todo -->
   </h4>
-  <input type="text">
-  <button>add</button>
+  <input type="text" [(ngModel)]="todoText">
+  <button (click)="doSendTodo()">add</button>
 </div>
