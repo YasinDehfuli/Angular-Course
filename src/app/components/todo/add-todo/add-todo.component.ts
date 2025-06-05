@@ -18,7 +18,12 @@ export class AddTodoComponent {
     }
 
     doSendTodo() {
-        this.updateTodo.emit({title : this.todoText})
+        this.updateTodo.emit({title: this.todoText})
         this.todoText = ''
+    }
+
+    doChangeLocalRefColor(ref: any) {
+        ref.style.color = 'red'
+        ref.style.backgroundColor = 'yellow'
     }
 }

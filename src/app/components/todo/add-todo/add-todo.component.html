@@ -4,4 +4,7 @@
   </h4>
   <input type="text" [(ngModel)]="todoText">
   <button (click)="doSendTodo()">add</button>
+  <button class="local-color" #localRef>Local Referenced Button Color</button>
+  
+  <div (click)="doChangeLocalRefColor(localRef)" > change local Referenced color </div>
 </div>
