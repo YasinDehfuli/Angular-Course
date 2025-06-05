@@ -2,10 +2,15 @@
   display: flex;
 }
 
-.local-color{
+.local__color{
   background: black;
   color: white;
   border : 1px solid red;
   border-radius: 20px;
   margin: 10px;
+}
+
+.view__child{
+  background: aqua;
+  color: black;
 }

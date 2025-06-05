@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, ElementRef, EventEmitter, Output, ViewChild} from '@angular/core';
 import {FormsModule} from "@angular/forms";
 
 @Component({
@@ -12,6 +12,7 @@ import {FormsModule} from "@angular/forms";
 export class AddTodoComponent {
     todoText: string;
     @Output() updateTodo = new EventEmitter<{ title: string }>();
+    @ViewChild('refWithViewChild') refWithViewChild: ElementRef | undefined
 
     constructor() {
         this.todoText = ''
@@ -25,5 +26,10 @@ export class AddTodoComponent {
     doChangeLocalRefColor(ref: any) {
         ref.style.color = 'red'
         ref.style.backgroundColor = 'yellow'
+    }
+
+    doChangeWithViewChild() {
+        this.refWithViewChild!.nativeElement.style.color = 'green'
+        this.refWithViewChild!.nativeElement.style.backgroundColor = 'black'
     }
 }
