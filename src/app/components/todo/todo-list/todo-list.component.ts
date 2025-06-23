@@ -1,12 +1,15 @@
 import {Component} from '@angular/core';
 import {TodoComponent} from "../todo/todo.component";
-import {NgForOf} from "@angular/common";
+import {NgForOf, NgSwitch, NgSwitchCase, NgSwitchDefault} from "@angular/common";
 
 @Component({
     selector: 'app-todo-list',
     imports: [
         TodoComponent,
-        NgForOf
+        NgForOf,
+        NgSwitch,
+        NgSwitchCase,
+        NgSwitchDefault
     ],
     templateUrl: './todo-list.component.html',
     styleUrl: './todo-list.component.scss'
@@ -25,4 +28,6 @@ export class TodoListComponent {
     doInsert(title: string) {
         this.todos.push({id: Math.random(), title:  title})
     }
+
+    casesHandling = 'case2'
 }
