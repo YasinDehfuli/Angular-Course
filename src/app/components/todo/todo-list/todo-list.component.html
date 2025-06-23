@@ -4,4 +4,8 @@
       <p>{{todo.title}}</p>
       }
     </app-todo>
+  
+  <ul *ngFor="let todo of todos">
+    <li>{{todo.title}}</li>
+  </ul>
 </ul>
