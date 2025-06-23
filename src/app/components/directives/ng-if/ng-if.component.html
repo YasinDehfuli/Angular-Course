@@ -1,0 +1,10 @@
+<p class="directive-color" *ngIf="showAlert; else showAnotherAlert">ng-if works!</p>
+
+<ng-template #showAnotherAlert>
+  <button (click)="shouldShowAlert()">
+    Clickable alert
+  </button>
+  <p class="showAlert">
+    Alert Ng If In Ng Template Structure works
+  </p>
+</ng-template>
