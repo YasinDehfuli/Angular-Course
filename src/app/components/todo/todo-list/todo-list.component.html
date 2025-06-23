@@ -9,7 +9,7 @@
     <li>{{todo.title}}</li>
   </ul>
   
-  <div [ngSwitch]="casesHandling" >
+  <div [ngSwitch]="casesHandling" [ngStyle]="{backgroundColor : getColor()} "  >
     <h1 *ngSwitchCase="'case1'">This is case 1 </h1>
     <h2 *ngSwitchCase="'case2'">This is case 2 </h2>
     <h3 *ngSwitchCase="'case3'">This is case 3 </h3>

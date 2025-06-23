@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {TodoComponent} from "../todo/todo.component";
-import {NgForOf, NgSwitch, NgSwitchCase, NgSwitchDefault} from "@angular/common";
+import {NgForOf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault} from "@angular/common";
 
 @Component({
     selector: 'app-todo-list',
@@ -9,12 +9,15 @@ import {NgForOf, NgSwitch, NgSwitchCase, NgSwitchDefault} from "@angular/common"
         NgForOf,
         NgSwitch,
         NgSwitchCase,
-        NgSwitchDefault
+        NgSwitchDefault,
+        NgStyle
     ],
     templateUrl: './todo-list.component.html',
     styleUrl: './todo-list.component.scss'
 })
 export class TodoListComponent {
+    casesHandling = 'case3'
+
     public todos = [{
         id: 1,
         title: 'Test',
@@ -26,8 +29,20 @@ export class TodoListComponent {
     ]
 
     doInsert(title: string) {
-        this.todos.push({id: Math.random(), title:  title})
+        this.todos.push({id: Math.random(), title: title})
     }
 
-    casesHandling = 'case2'
+    getColor() {
+        switch (this.casesHandling) {
+            case 'case1':
+                return 'red'
+            case 'case2':
+                return 'green'
+            case 'case3':
+                return 'yellow'
+            default:
+                return 'black'
+        }
+    }
+
 }
