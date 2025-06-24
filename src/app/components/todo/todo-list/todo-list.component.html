@@ -1,15 +1,15 @@
 <ul>
-    <app-todo>
-      @for (todo of todos; track todo.id) {
-      <p>{{todo.title}}</p>
-      }
-    </app-todo>
+  <app-todo>
+    @for (todo of todos; track todo.id; let i = $index ) {
+      <p [ngClass]="{'oddClass': i % 2 === 0 }">{{ todo.title }}</p>
+    }
+  </app-todo>
   
   <ul *ngFor="let todo of todos">
-    <li>{{todo.title}}</li>
+    <li>{{ todo.title }}</li>
   </ul>
   
-  <div [ngSwitch]="casesHandling" [ngStyle]="{backgroundColor : getColor()} "  >
+  <div [ngSwitch]="casesHandling" [ngStyle]="{backgroundColor : getColor()} ">
     <h1 *ngSwitchCase="'case1'">This is case 1 </h1>
     <h2 *ngSwitchCase="'case2'">This is case 2 </h2>
     <h3 *ngSwitchCase="'case3'">This is case 3 </h3>

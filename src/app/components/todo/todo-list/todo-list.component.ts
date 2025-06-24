@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {TodoComponent} from "../todo/todo.component";
-import {NgForOf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault} from "@angular/common";
+import {NgClass, NgForOf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault} from "@angular/common";
 
 @Component({
     selector: 'app-todo-list',
@@ -10,20 +10,27 @@ import {NgForOf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault} from "@angula
         NgSwitch,
         NgSwitchCase,
         NgSwitchDefault,
-        NgStyle
+        NgStyle,
+        NgClass
     ],
     templateUrl: './todo-list.component.html',
     styleUrl: './todo-list.component.scss'
 })
 export class TodoListComponent {
     casesHandling = 'case3'
+    isOdd = true
 
-    public todos = [{
-        id: 1,
-        title: 'Test',
-    },
+    public todos = [
+        {
+            id: 1,
+            title: 'Test',
+        },
         {
             id: 2,
+            title: 'Test2',
+        },
+        {
+            id: 3,
             title: 'Test2',
         }
     ]
@@ -44,5 +51,4 @@ export class TodoListComponent {
                 return 'black'
         }
     }
-
 }
