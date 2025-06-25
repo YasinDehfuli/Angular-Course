@@ -1,10 +1,20 @@
-import {Directive, ElementRef} from '@angular/core';
+import {Directive, ElementRef, HostListener, OnInit} from '@angular/core';
 
 @Directive({
-    selector: '[SpecialElement]'
+    selector: '[appSpecialElement]',
+    standalone: true,
 })
-export class SpecialElementDirective {
+export class SpecialElementDirective implements OnInit {
     constructor(el : ElementRef) {
         console.log('SpecialElementDirective Works!');
+    }
+
+    ngOnInit() {
+        console.log('SpecialElementDirective Works on Init!');
+    }
+
+    @HostListener('mouseenter')
+    public mouseEnter() {
+        console.log("runs")
     }
 }

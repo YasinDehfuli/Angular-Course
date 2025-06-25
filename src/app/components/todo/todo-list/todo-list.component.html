@@ -6,7 +6,7 @@
   </app-todo>
   
   <ul *ngFor="let todo of todos">
-    <li SpecialElement>{{ todo.title }}</li>
+    <li appSpecialElement="text">{{ todo.title }}</li>
   </ul>
   
   <div [ngSwitch]="casesHandling" [ngStyle]="{backgroundColor : getColor()} ">
