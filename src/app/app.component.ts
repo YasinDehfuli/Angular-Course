@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {RouterModule} from "@angular/router";
 import {TodosComponent} from "./components/todo/todos/todos.component";
-import {NgIfComponent} from "./components/directives/ng-if/ng-if.component";
+import {NgIfComponent} from "./components/directives-learn/ng-if/ng-if.component";
 
 @Component({
     imports: [RouterModule, TodosComponent, NgIfComponent],

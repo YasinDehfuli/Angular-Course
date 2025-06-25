@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {TodoComponent} from "../todo/todo.component";
 import {NgClass, NgForOf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault} from "@angular/common";
+import {SpecialElementDirective} from "../../../directives/special-element.directive";
 
 @Component({
     selector: 'app-todo-list',
@@ -11,7 +12,8 @@ import {NgClass, NgForOf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault} from
         NgSwitchCase,
         NgSwitchDefault,
         NgStyle,
-        NgClass
+        NgClass,
+        SpecialElementDirective
     ],
     templateUrl: './todo-list.component.html',
     styleUrl: './todo-list.component.scss'
