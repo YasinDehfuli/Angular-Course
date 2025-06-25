@@ -1,12 +1,15 @@
-import {Directive, ElementRef, HostListener, OnInit} from '@angular/core';
+import {Directive, ElementRef, HostListener, Input, OnInit} from '@angular/core';
 
 @Directive({
     selector: '[appSpecialElement]',
     standalone: true,
 })
 export class SpecialElementDirective implements OnInit {
-    constructor(el : ElementRef) {
+    @Input() appSpecialElement!: boolean;
+
+    constructor(el: ElementRef) {
         console.log('SpecialElementDirective Works!');
+        console.log(this.appSpecialElement)
     }
 
     ngOnInit() {
